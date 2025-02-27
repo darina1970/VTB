@@ -1522,3 +1522,9 @@ button {
   top: 60%;
   font-size: large;
 }
+
+@media screen and (max-width: 768px) {
+  .greeting__wrapper {
+    flex-direction: row;
+  }
+}
