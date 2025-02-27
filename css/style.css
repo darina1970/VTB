@@ -1264,6 +1264,15 @@ button {
     gap: 17px;
     align-items: center;
   }
+  .editing-target__wrapper {
+    height: unset;
+    width: unset;
+    display: flex;
+    position: unset;
+    left: 160px;
+    top: 30px;
+    bottom: 30px;
+  }
   .user-photo-container {
     position: relative;
   }
