@@ -43,7 +43,8 @@ function startOnce(fn, context) {
     const priorityTime=settings.priorityTime;
   
     const superPriorityTargets=targets.find(target=> Number(target.id)===Number(superPriorityId));
-    const priorityTargets=targets.filter(target => target.priorityLevel === priorityLevel && target.priorityTime === priorityTime);
+    const priorityTargets=targets.filter(target=>target.priorityLevel===priorityLevel && target.priorityTime===priorityTime);
+    console.log(priorityTargets)
   
     const sortedTargets = [];
   
@@ -131,7 +132,7 @@ function startOnce(fn, context) {
   
   function targetToChart(target){
     const ctx1 = document.getElementById('chart1').getContext('2d');
-  
+
     const currentDate=new Date();
     console.log(currentDate)
     const lastWeekDays=[];
@@ -173,7 +174,7 @@ function startOnce(fn, context) {
         data: {
             labels:lastWeekDays,
             datasets: [{
-                label: 'Всего целей (шт.)',
+                label:  'Всего целей (шт.)',
                 data: [20, 30, 25, 50, 45, 30],// тут можно добавить переменную с количеством целей, которая увеличивается или уменьшается при добавлении или удалении целей
                 backgroundColor:'rgba(1, 112, 223, 0)',
                 borderColor:  'rgba(32, 181, 238, 0.67)',
@@ -191,3 +192,15 @@ function startOnce(fn, context) {
     });
   };
   targetToChart();
+  function displayTotalTargetsNumber(){
+    
+    const goals=document.getElementById("goals__chart");
+    const targetElement = document.createElement("div");
+    targetElement.setAttribute("data-id", target.id);
+    const totalTargetsNumber=targets.length;
+
+  targetElement.innerHTML=`
+    <span class="progress-goals">Всего целей: ${totalTargetsNumber} </span>`
+ goals.appendChild(targetElement);
+
+  }
