@@ -192,15 +192,4 @@ function startOnce(fn, context) {
     });
   };
   targetToChart();
-  function displayTotalTargetsNumber(){
-    
-    const goals=document.getElementById("goals__chart");
-    const targetElement = document.createElement("div");
-    targetElement.setAttribute("data-id", target.id);
-    const totalTargetsNumber=targets.length;
-
-  targetElement.innerHTML=`
-    <span class="progress-goals">Всего целей: ${totalTargetsNumber} </span>`
- goals.appendChild(targetElement);
-
-  }
+  
