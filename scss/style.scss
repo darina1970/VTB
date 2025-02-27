@@ -1425,3 +1425,129 @@ button {
     flex: 1 1 100%;
   }
 }
+//главная страница
+.goals__info__wrapper{
+  display: flex;
+}
+.greeting{
+  background-color:$bg-white ;
+  width: 410;
+  height: 200;
+  top: 20px;
+  left: 25px; 
+}
+.main__wrapper{
+  display: flex;
+  flex: 1;
+  height: calc(100vh - 60px);
+  width: calc(100vw - 200px);
+  position: fixed;
+  left: 160px;
+  top: 30px;
+  bottom: 20px;
+}
+.greeting__wrapper{
+  display: flex;
+  flex-direction: column;
+  gap:20px; 
+}
+.greeting__wrapper__top{
+  display: flex;
+  background-color:$bg-white;  
+  align-items: center; 
+  border-radius:10px;
+}
+  .greeting__wrapper__top-text{
+  display: flex;
+  flex-direction: column;
+  color: $accent-dark;
+  font-weight: bold;
+  font-size: 30px;
+  margin-left:20px;
+  }
+  .greeting__wrapper__top-image{
+    margin: 20px;
+  }
+  .greeting__items{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+
+    &-item__top-title{
+      color:$accent-light;
+      margin-bottom: 20px;
+      margin-top: 20px;
+      font-weight:500;
+  }
+  }
+  .target__items-item__top-link__wrapper{
+   margin-top: 20px;
+  }
+  .progress-bar__wrapper{
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+  .progress-info__label,
+  .progress-info__remaining {
+    font-weight:lighter;
+    color: $text;
+  }
+  .greeting-info__amount{
+    display: flex;
+    justify-content: space-between;
+  }
+  .greeting_wrapper_body{
+    display: flex;
+    flex-direction: column;
+    background-color:$bg-white; 
+    color: $accent-dark;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius:10px;
+    padding:20px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: none; 
+    height: 100%;
+  }
+.greeting_container_body{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.charts_wrapper{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: calc(100vh - 60px);
+  padding-bottom:20px;
+}
+.funds__chart{
+  background-color:$bg-white;  
+  border-radius:10px;
+  margin-left:20px;
+  margin-bottom:20px;
+  width: 90%;
+  height: 50%;
+}
+.goals__chart{
+  background-color:$bg-white;  
+  border-radius:10px;
+  margin-left:20px;
+  width: 90%;
+  height: 50%;
+}
+.greeting-targets-message{
+  position: fixed;
+  left: 15%;
+  top: 60%;
+  font-size:large;
+}
+@media screen and (max-width: 768px) {
+  .greeting__wrapper{
+    flex-direction: row;
+  }
+  
+}
+//главная страница
+
