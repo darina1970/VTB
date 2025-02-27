@@ -122,7 +122,8 @@ function saveGoal() {
         priorityLevel,
         // priorityTimeText,
         // priorityLevelText,
-        image: "./assets/images/img/default-image.png",  
+        image: "./assets/images/img/default-image.png",
+        progressHistory: [] 
     };
 
     if (targetImageInput.files.length > 0) {

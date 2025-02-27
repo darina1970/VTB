@@ -836,9 +836,20 @@ button {
   background-color: rgb(255, 255, 255);
   width: 93%;
   border-radius: 10px;
-  margin-left: 25px;
+  /* margin-left: 25px; */
   padding: 38px 80px;
   justify-content: space-between;
+  flex: 1;
+  height: calc(100vh - 60px);
+  width: calc(100vw - 190px);
+  gap: 30px;
+  position: fixed;
+  left: 160px;
+  top: 30px;
+  bottom: 30px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: none;
 }
 
 .settings__inputs-container {
@@ -1263,6 +1274,15 @@ button {
     display: flex;
     gap: 17px;
     align-items: center;
+  }
+  .editing-target__wrapper {
+    height: unset;
+    width: unset;
+    display: flex;
+    position: unset;
+    left: 160px;
+    top: 30px;
+    bottom: 30px;
   }
   .user-photo-container {
     position: relative;
