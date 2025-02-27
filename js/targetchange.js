@@ -284,8 +284,6 @@ document.addEventListener('DOMContentLoaded', function () {
         const currentDate = new Date().toISOString().split('T')[0];
         target.progressHistory.push({date: currentDate, progress: target.progress});
 
-        const currentDate = new Date().toISOString().split('T')[0];
-        target.progressHistory.push({date: currentDate, progress: target.progress});
 
         alert('Цель успешно пополнена');
 

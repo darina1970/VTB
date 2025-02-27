@@ -1479,12 +1479,6 @@ button {
   margin-top: 20px;
 }
 
-.progress-info__label,
-.progress-info__remaining {
-  font-weight: lighter;
-  color: #292929;
-}
-
 .greeting-info__amount {
   display: flex;
   justify-content: space-between;
