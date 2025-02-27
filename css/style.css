@@ -1537,9 +1537,6 @@ button {
 }
 
 .greeting-targets-message {
-  position: fixed;
-  left: 15%;
-  top: 60%;
   font-size: large;
 }
 
