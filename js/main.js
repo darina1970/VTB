@@ -43,7 +43,7 @@ function startOnce(fn, context) {
     const priorityTime=settings.priorityTime;
   
     const superPriorityTargets=targets.find(target=> Number(target.id)===Number(superPriorityId));
-    const priorityTargets=targets.filter(target.priorityLevel === priorityLevel && target.priorityTime === priorityTime);
+    const priorityTargets=targets.filter(target => target.priorityLevel === priorityLevel && target.priorityTime === priorityTime);
   
     const sortedTargets = [];
   
@@ -58,8 +58,8 @@ function startOnce(fn, context) {
   
    if (sortedTargets.length === 0) {
        const noTargetsMessage = document.createElement('p');
-       noTargetsMessage.classList.add('no-targets-message');
-       noTargetsMessage.textContent = 'Приоритетных целей пока нет';
+       noTargetsMessage.classList.add('greeting-targets-message');
+       noTargetsMessage.textContent = 'Приоритетных целей пока нет...';
        greetingItemsContainer.appendChild(noTargetsMessage);
    } else {
        sortedTargets.forEach(target => {
@@ -69,8 +69,8 @@ function startOnce(fn, context) {
                addTargetToDOM(target, superPriorityId); 
            }
        });
-   } 
   }
+}
   
   function addTargetToDOM(target) {
   
