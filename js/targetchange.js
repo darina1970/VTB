@@ -18,6 +18,20 @@ document.addEventListener('DOMContentLoaded', function () {
     backButton.addEventListener('click', () => {
         window.history.back();
     });
+
+    const userPhoto = document.getElementById('userPhoto');
+    const dropdownMenu = document.getElementById('dropdownMenu');
+
+    userPhoto.addEventListener('click', function (event) {
+        dropdownMenu.classList.toggle('visible'); 
+        event.stopPropagation();
+    });
+
+    document.addEventListener('click', function (event) {
+        if (!userPhoto.contains(event.target) && !dropdownMenu.contains(event.target)) {
+            dropdownMenu.classList.remove('visible');
+        }
+    });
     
     const targetId = localStorage.getItem('editingTargetId'); // Получаем ID цели
     console.log('Цель', targetId)
@@ -266,7 +280,7 @@ document.addEventListener('DOMContentLoaded', function () {
             return
         }
         target.progress += deposit;
-        
+
         const currentDate = new Date().toISOString().split('T')[0];
         target.progressHistory.push({date: currentDate, progress: target.progress});
 
