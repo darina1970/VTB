@@ -44,9 +44,10 @@ function startOnce(fn, context) {
   
     const superPriorityTargets=targets.find(target=> Number(target.id)===Number(superPriorityId));
     const priorityTargets=targets.filter(target=>target.priorityLevel===priorityLevel && target.priorityTime===priorityTime);
-    console.log(priorityTargets)
+   // console.log(priorityTargets)
   
     const sortedTargets = [];
+   // console.log(sortedTargets)
   
     if(superPriorityTargets){
       sortedTargets.push(superPriorityTargets);
@@ -60,7 +61,7 @@ function startOnce(fn, context) {
    if (sortedTargets.length === 0) {
        const noTargetsMessage = document.createElement('p');
        noTargetsMessage.classList.add('greeting-targets-message');
-       noTargetsMessage.textContent = 'Приоритетных целей пока нет...';
+       noTargetsMessage.textContent = 'Суперприоритетные цели пока отсутствуют...';
        greetingItemsContainer.appendChild(noTargetsMessage);
    } else {
        sortedTargets.forEach(target => {

@@ -1482,6 +1482,7 @@ button {
   overflow-y: auto;
   overflow-x: hidden;
   scrollbar-width: none;
+  height: 100%;
 }
 
 .greeting_container_body {
