@@ -1524,6 +1524,12 @@ button {
 //   font-weight:lighter;
 //   color: $text;
 // }
+.greeting-progress-info__label,
+.greeting-progress-info__remaining {
+  font-weight: 700;
+  color: rgba(41, 41, 41, 1);
+}
+
 .greeting-info__amount {
   display: flex;
   justify-content: space-between;

@@ -99,8 +99,8 @@ function startOnce(fn, context) {
               <div class="progress-bar" style="width: ${progressPercent}%; background-color: ${progressColor};"><p>${progressPercentRound}%</p></div>
           </div>   
           <div class="greeting-info__amount">
-          <span class="progress-info__label">Осталось собрать:</span>
-          <span class="progress-info__remaining">${remainingAmount} ₽</span>
+          <span class="greeting-progress-info__label">Осталось собрать:</span>
+          <span class="greeting-progress-info__remaining">${remainingAmount} ₽</span>
   
           <div class="target__items-item__top-link__wrapper">
           <svg
