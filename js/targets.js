@@ -79,6 +79,8 @@ function renderTargets() {
         noTargetsMessage.classList.add('no-targets-message');
         noTargetsMessage.textContent = 'Целей пока нет';
         targetsContainer.appendChild(noTargetsMessage);
+        const noTargetsContainer = document.querySelector('.items__wrapper');
+        noTargetsContainer.classList.add('background-filled');
     } else {
         sortedTargets.forEach(target => {
     // Проверяем, нет ли уже такой цели в контейнере

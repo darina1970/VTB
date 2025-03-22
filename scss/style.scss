@@ -439,7 +439,12 @@ button {
   position: fixed;
   left: 50%;
   top: 50%;
-  font-size: x-large;
+  font-size: 32px;
+}
+
+.background-filled {
+  background-color: $bg-white;
+  border-radius: 10px;
 }
 
 .target__wrapper {
@@ -1094,24 +1099,27 @@ button {
 
 //Страница "Помощь"
 .help__main-wrapper {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  background-color: $bg-white;
-  width: 93%;
-  border-radius: 10px;
-  margin-left: 25px;
-  padding: 38px 80px;
-  justify-content: space-between;
+  position: fixed;
+  top: 62px;
+  left: 225px;
+  right: 105px;
+  bottom: 62px;
+  border-radius: 20px;
+  overflow: auto;
+  background-color: #fff;
+  padding: 20px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: none;
 }
 
-.target__wrapper__help {
-  display: flex;
-  height: 100vh;
-  padding: 30px 20px;
-  gap: 20px;
-  margin: 92px 105px;
-}
+// .target__wrapper__help {
+//   display: flex;
+//   height: 100vh;
+//   padding: 30px 20px;
+//   gap: 20px;
+//   margin: 92px 105px;
+// }
 
 .help__cancel {
   display: flex;
@@ -1229,6 +1237,40 @@ button {
   // Уменьшаем паддинги для обертки редактируемой цели
   .editing-target {
     padding: 20px 30px;
+  }
+  .help__main-wrapper {
+    top: 35px;
+    left: 190px;
+    right: 50px;
+    bottom: 35px;
+    padding: 10px;
+  }
+  .help__cancel {
+    margin-top: 0px;
+    margin-bottom: 20px;
+  }
+  .help__gallery {
+    justify-content: center;
+    gap: 40px;
+  }
+  .help__gallery__card {
+    padding: 43px 24px;
+    margin-bottom: 0px;
+    height: unset;
+  }
+
+  .help__card__container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: center;
+    max-width: 234px;
+  }
+  .help__card__title {
+    margin-bottom: 15px;
+  }
+  .help__card__img {
+    margin-bottom: 15px;
   }
 }
 
